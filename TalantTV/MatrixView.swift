@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct MatrixView: View {
     
     @State var isKitchen: Bool = true
@@ -20,16 +18,18 @@ struct MatrixView: View {
         if (mode == "Virgin")
         {
             if (isKitchen){
-                
+                SendMatrix(hexcode: "a55b02030100030000000000f7")
             }
             if (isLiving){
-                
+                SendMatrix(hexcode: "a55b02030100010000000000f9")
             }
             if (isBedroom){
+                SendMatrix(hexcode: "a55b02030100020000000000f8")
                 
             }
             if (isLoft){
-                
+                SendMatrix(hexcode: "a55b02030100040000000000f6")
+            
             }
             
         }
@@ -37,16 +37,50 @@ struct MatrixView: View {
         if (mode == "Mac")
         {
             if (isKitchen){
-                
+                SendMatrix(hexcode: "a55b02030400030000000000f4")
             }
             if (isLiving){
-                
+                SendMatrix(hexcode: "a55b02030400010000000000f6")
             }
             if (isBedroom){
-                
+                SendMatrix(hexcode: "a55b02030400020000000000f5")
             }
             if (isLoft){
-                
+                SendMatrix(hexcode: "a55b02030400040000000000f3")
+            }
+            
+        }
+        
+        if (mode == "Freeview")
+        {
+            if (isKitchen){
+                SendMatrix(hexcode: "a55b02030200030000000000f6")
+            }
+            if (isLiving){
+                SendMatrix(hexcode: "a55b02030200010000000000f8")
+            }
+            if (isBedroom){
+                SendMatrix(hexcode: "a55b02030200020000000000f7")
+            }
+            if (isLoft){
+                SendMatrix(hexcode: "a55b02030200040000000000f5")
+            }
+            
+        }
+        
+        if (mode == "Roku")
+        {
+            if (isKitchen){
+                SendMatrix(hexcode: "a55b02030300030000000000f5")
+            }
+            if (isLiving){
+                SendMatrix(hexcode: "a55b02030300010000000000f7")
+            }
+            if (isBedroom){
+                SendMatrix(hexcode: "a55b02030300020000000000f6")
+            }
+            if (isLoft){
+                SendMatrix(hexcode: "a55b02030300040000000000f4")
             }
             
         }
@@ -117,31 +151,31 @@ struct MatrixView: View {
                 
                 HStack{
                     
-                    Button("Virgin") {
-                        print("Button tapped!")
+                    Button(" Virgin ") {
+                     clicked(mode: "Virgin")
                     }
                     .foregroundColor(.black)
                     .padding()
                     .background(Color.orange)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
-                                        
+                    
                     
                     Button("Freeview") {
-                        print("Button tapped!")
-                    }.foregroundColor(.black)
+                     clicked(mode: "Freeview")
+                    }
+                    .foregroundColor(.black)
                     .padding()
                     .background(Color.orange)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
-              
                     
                 }
                 
                 
                 HStack{
-                    Button("Roku") {
-                        print("Button tapped!")
+                    Button("  Roku  ") {
+                        clicked(mode: "Roku")
                     }.foregroundColor(.black)
                     .padding()
                     .background(Color.orange)
@@ -149,8 +183,8 @@ struct MatrixView: View {
                     .frame(width: 150, height: 100)
 
                     
-                    Button("Mac") {
-                        print("Button tapped!")
+                    Button("   Mac   ") {
+                        clicked(mode: "Mac")
                     }.foregroundColor(.black)
                     .padding()
                     .background(Color.orange)
@@ -161,7 +195,7 @@ struct MatrixView: View {
             }
             
         }
-        .background(Color.gray)
+        .background(Color.gray.edgesIgnoringSafeArea(.all))
     }
 }
 
