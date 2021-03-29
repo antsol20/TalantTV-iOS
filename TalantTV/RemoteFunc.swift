@@ -14,7 +14,6 @@ func SendRoku(code: String){
     
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
-    // testing 
     
     let task = URLSession.shared.dataTask(with: request)
     task.resume()
