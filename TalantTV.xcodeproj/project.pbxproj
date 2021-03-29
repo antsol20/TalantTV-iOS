@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A021D902611CCAD00AB71D8 /* VirginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A021D8F2611CCAD00AB71D8 /* VirginView.swift */; };
+		0A021D932611CCE500AB71D8 /* RokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A021D922611CCE500AB71D8 /* RokuView.swift */; };
+		0A021D962611CD0500AB71D8 /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A021D952611CD0500AB71D8 /* MatrixView.swift */; };
 		0A5005C12611BCA000D38F20 /* TalantTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5005C02611BCA000D38F20 /* TalantTVApp.swift */; };
 		0A5005C32611BCA000D38F20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5005C22611BCA000D38F20 /* ContentView.swift */; };
 		0A5005C52611BCA100D38F20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5005C42611BCA100D38F20 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A021D8F2611CCAD00AB71D8 /* VirginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirginView.swift; sourceTree = "<group>"; };
+		0A021D922611CCE500AB71D8 /* RokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RokuView.swift; sourceTree = "<group>"; };
+		0A021D952611CD0500AB71D8 /* MatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixView.swift; sourceTree = "<group>"; };
 		0A5005BD2611BCA000D38F20 /* TalantTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalantTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5005C02611BCA000D38F20 /* TalantTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalantTVApp.swift; sourceTree = "<group>"; };
 		0A5005C22611BCA000D38F20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 				0A5005C92611BCA100D38F20 /* Info.plist */,
 				0A5005C62611BCA100D38F20 /* Preview Content */,
 				0A5005D02611BCEB00D38F20 /* RemoteFunc.swift */,
+				0A021D8F2611CCAD00AB71D8 /* VirginView.swift */,
+				0A021D922611CCE500AB71D8 /* RokuView.swift */,
+				0A021D952611CD0500AB71D8 /* MatrixView.swift */,
 			);
 			path = TalantTV;
 			sourceTree = "<group>";
@@ -170,11 +179,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5005ED2611C20B00D38F20 /* yudpsocket.c in Sources */,
+				0A021D932611CCE500AB71D8 /* RokuView.swift in Sources */,
 				0A5005C32611BCA000D38F20 /* ContentView.swift in Sources */,
+				0A021D902611CCAD00AB71D8 /* VirginView.swift in Sources */,
 				0A5005F22611C20B00D38F20 /* UDPClient.swift in Sources */,
 				0A5005EF2611C20B00D38F20 /* TCPClient.swift in Sources */,
 				0A5005C12611BCA000D38F20 /* TalantTVApp.swift in Sources */,
 				0A5005F42611C20B00D38F20 /* Socket.swift in Sources */,
+				0A021D962611CD0500AB71D8 /* MatrixView.swift in Sources */,
 				0A5005F02611C20B00D38F20 /* Result.swift in Sources */,
 				0A5005D12611BCEB00D38F20 /* RemoteFunc.swift in Sources */,
 				0A5005EE2611C20B00D38F20 /* ytcpsocket.c in Sources */,
