@@ -25,7 +25,7 @@ struct ContentView: View {
                     Image(systemName: "square.grid.4x3.fill")
                     Text("Matrix")
                 }
-        }
+        }.accentColor(.orange)
     }
 }
 
