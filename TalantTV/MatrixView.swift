@@ -7,45 +7,109 @@
 
 import SwiftUI
 
+
+
 struct MatrixView: View {
+    
     @State var isKitchen: Bool = true
     @State var isLiving: Bool = false
     @State var isBedroom: Bool = false
     @State var isLoft: Bool = false
     
+    func clicked(mode: String){
+        if (mode == "Virgin")
+        {
+            if (isKitchen){
+                
+            }
+            if (isLiving){
+                
+            }
+            if (isBedroom){
+                
+            }
+            if (isLoft){
+                
+            }
+            
+        }
+        
+        if (mode == "Mac")
+        {
+            if (isKitchen){
+                
+            }
+            if (isLiving){
+                
+            }
+            if (isBedroom){
+                
+            }
+            if (isLoft){
+                
+            }
+            
+        }
+        
+        
+        
+    }
+
     var body: some View {
         
         VStack{
             
             Toggle(isOn: $isKitchen) {
                 Text("Kitchen")
-                    .onTapGesture {
-                        resetToggle()
-                    }
+                    .onChange(of: isKitchen, perform: { value in
+                        if (isKitchen){
+                            isLiving = false
+                            isBedroom = false
+                            isLoft = false
+                        }
+                        
+                    })
             }.padding()
+            .toggleStyle(SwitchToggleStyle(tint: .orange))
+            
             
             Toggle(isOn: $isLiving) {
                 Text("Living Room")
-                    .onTapGesture {
-                        resetToggle()
-                    }
+                    .onChange(of: isLiving, perform: { value in
+                        if (isLiving){
+                            isKitchen = false
+                            isBedroom = false
+                            isLoft = false
+                        }
+                    })
             }.padding()
+            .toggleStyle(SwitchToggleStyle(tint: .orange))
             
             Toggle(isOn: $isBedroom) {
                 Text("Bedroom")
-                    .onTapGesture {
-                        resetToggle()
-                    }
+                    .onChange(of: isBedroom, perform: { value in
+                        if (isBedroom){
+                            isKitchen = false
+                            isLiving = false
+                            isLoft = false
+                        }
+                    })
                 
             }.padding()
+            .toggleStyle(SwitchToggleStyle(tint: .orange))
             
             Toggle(isOn: $isLoft) {
                 Text("Loft")
-                    .onTapGesture {
-                        resetToggle()
-                    }
+                    .onChange(of: isLoft, perform: { value in
+                        if (isLoft){
+                            isKitchen = false
+                            isLiving = false
+                            isBedroom = false
+                        }
+                    })
                 
             }.padding()
+            .toggleStyle(SwitchToggleStyle(tint: .orange))
             
             Spacer()
             
@@ -53,60 +117,52 @@ struct MatrixView: View {
                 
                 HStack{
                     
-                    Button("VIRGIN") {
+                    Button("Virgin") {
                         print("Button tapped!")
-                    }.padding(80)
+                    }
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(Color.orange)
+                    .cornerRadius(8)
+                    .frame(width: 150, height: 100)
+                                        
                     
-                    Button("FREEVIEW") {
+                    Button("Freeview") {
                         print("Button tapped!")
-                    }.padding(80)
+                    }.foregroundColor(.black)
+                    .padding()
+                    .background(Color.orange)
+                    .cornerRadius(8)
+                    .frame(width: 150, height: 100)
+              
+                    
                 }
-                
                 
                 
                 HStack{
-                    Button("ROKU") {
+                    Button("Roku") {
                         print("Button tapped!")
-                    }.padding(80)
+                    }.foregroundColor(.black)
+                    .padding()
+                    .background(Color.orange)
+                    .cornerRadius(8)
+                    .frame(width: 150, height: 100)
+
                     
-                    Button("MAC") {
+                    Button("Mac") {
                         print("Button tapped!")
-                    }.padding(80)
+                    }.foregroundColor(.black)
+                    .padding()
+                    .background(Color.orange)
+                    .cornerRadius(8)
+                    .frame(width: 150, height: 100)
+            
                 }
             }
             
         }
+        .background(Color.gray)
     }
-
-
-        func resetToggle(){
-            
-            if (isKitchen){
-                isLiving = false
-                isBedroom = false
-                isLoft = false
-            }
-            
-            else if (isLiving){
-                isKitchen = false
-                isBedroom = false
-                isLoft = false
-            }
-            
-            else if (isBedroom){
-                isKitchen = false
-                isLiving = false
-                isLoft = false
-            }
-            else if (isLoft){
-                isKitchen = false
-                isLiving = false
-                isBedroom = false
-            }
-            
-        }
-        
-    
 }
 
 
