@@ -19,54 +19,101 @@ struct MatrixView: View {
             
             Toggle(isOn: $isKitchen) {
                 Text("Kitchen")
-            }
+                    .onTapGesture {
+                        resetToggle()
+                    }
+            }.padding()
             
             Toggle(isOn: $isLiving) {
                 Text("Living Room")
-            }
+                    .onTapGesture {
+                        resetToggle()
+                    }
+            }.padding()
+            
             Toggle(isOn: $isBedroom) {
                 Text("Bedroom")
-            }
+                    .onTapGesture {
+                        resetToggle()
+                    }
+                
+            }.padding()
+            
             Toggle(isOn: $isLoft) {
                 Text("Loft")
-            }
+                    .onTapGesture {
+                        resetToggle()
+                    }
+                
+            }.padding()
             
             Spacer()
             
             VStack{
-            HStack{
-                
-                Button("Button title") {
-                    print("Button tapped!")
-                }
-                Button("Button title") {
-                    print("Button tapped!")
-                }
-            }.padding()
-                
-            
                 
                 HStack{
-                Button("Button title") {
-                    print("Button tapped!")
+                    
+                    Button("VIRGIN") {
+                        print("Button tapped!")
+                    }.padding(80)
+                    
+                    Button("FREEVIEW") {
+                        print("Button tapped!")
+                    }.padding(80)
                 }
-                Button("Button title") {
-                    print("Button tapped!")
-                }
-                }
-                }
-            
                 
+                
+                
+                HStack{
+                    Button("ROKU") {
+                        print("Button tapped!")
+                    }.padding(80)
+                    
+                    Button("MAC") {
+                        print("Button tapped!")
+                    }.padding(80)
+                }
             }
-
+            
         }
-       
-        
-        
     }
+
+
+        func resetToggle(){
+            
+            if (isKitchen){
+                isLiving = false
+                isBedroom = false
+                isLoft = false
+            }
+            
+            else if (isLiving){
+                isKitchen = false
+                isBedroom = false
+                isLoft = false
+            }
+            
+            else if (isBedroom){
+                isKitchen = false
+                isLiving = false
+                isLoft = false
+            }
+            else if (isLoft){
+                isKitchen = false
+                isLiving = false
+                isBedroom = false
+            }
+            
+        }
+        
+    
+}
+
 
 struct MatrixView_Previews: PreviewProvider {
     static var previews: some View {
         MatrixView()
     }
 }
+
+
