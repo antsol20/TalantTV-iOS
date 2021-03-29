@@ -13,30 +13,47 @@ struct RokuView: View {
             
       
 
-                Button("UP") {
-                    print("hello")
-                }
-                .foregroundColor(.black)
-                .padding()
-                .background(Color.orange)
-                .cornerRadius(8)
-               // .frame(width: 150, height: 100)
-                .frame(maxWidth: .infinity)
+//                Button("UP") {
+//                    print("hello")
+//                }
+//                .foregroundColor(.black)
+//                .padding()
+//                .background(Color.orange)
+//                .cornerRadius(8)
+//               // .frame(width: 150, height: 100)
+//                .frame(maxWidth: .infinity)
+            
+            Button(action: {
+                print("Button action")
+            }) {
+                Text("UP")
+                    .padding()
+                    .frame(maxWidth: 300, maxHeight: 40)
+                    
+                    .padding()
+                    .foregroundColor(.black)
+                    .background(Color.orange)
+                    .cornerRadius(8)
+                
+            }
                 
        
             
             
             HStack{
-                
-                Button("LEFT") {
-                 print("hello")
+                Button(action: {
+                    print("Button action")
+                }) {
+                    Text("LEFT")
+                        .padding()
+                        .frame(maxHeight: 40)
+                        
+                        .padding()
+                        .foregroundColor(.black)
+                        .background(Color.orange)
+                        .cornerRadius(8)
+                    
                 }
-                .foregroundColor(.black)
-                .padding()
-                .background(Color.orange)
-                .cornerRadius(8)
-                .frame(width: 150, height: 100)
-                
                 Button("SELECT") {
                  print("hello")
                 }
