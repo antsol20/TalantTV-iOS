@@ -10,6 +10,7 @@ import SwiftUI
 struct VirginView: View {
     var body: some View {
         VStack{
+            Spacer()
             
             VStack{
                 

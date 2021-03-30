@@ -15,6 +15,7 @@ struct RokuView: View {
     var body: some View {
         VStack{
             
+            Spacer()
             VStack{
                 
             
@@ -140,7 +141,7 @@ struct RokuView: View {
             }.padding()
             
             
-            
+            Spacer()
         } .background(bgColor.edgesIgnoringSafeArea(.all))
     }
 }

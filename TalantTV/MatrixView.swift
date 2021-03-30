@@ -93,9 +93,10 @@ struct MatrixView: View {
     var body: some View {
         
         VStack{
+            Spacer()
             
             Toggle(isOn: $isKitchen) {
-                Text("Kitchen")
+                Text("Kitchen").font(.title)
                     .onChange(of: isKitchen, perform: { value in
                         if (isKitchen){
                             isLiving = false
@@ -109,7 +110,7 @@ struct MatrixView: View {
             
             
             Toggle(isOn: $isLiving) {
-                Text("Living Room")
+                Text("Living Room").font(.title)
                     .onChange(of: isLiving, perform: { value in
                         if (isLiving){
                             isKitchen = false
@@ -121,7 +122,7 @@ struct MatrixView: View {
             .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Toggle(isOn: $isBedroom) {
-                Text("Bedroom")
+                Text("Bedroom").font(.title)
                     .onChange(of: isBedroom, perform: { value in
                         if (isBedroom){
                             isKitchen = false
@@ -134,7 +135,7 @@ struct MatrixView: View {
             .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Toggle(isOn: $isLoft) {
-                Text("Loft")
+                Text("Loft").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .onChange(of: isLoft, perform: { value in
                         if (isLoft){
                             isKitchen = false
@@ -146,13 +147,13 @@ struct MatrixView: View {
             }.padding()
             .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
-            Spacer()
+          Spacer()
             
             VStack{
                 
                 HStack{
                     
-                    Button(" Virgin ") {
+                    Button("   Virgin   ") {
                      clicked(mode: "Virgin")
                     }
                     .foregroundColor(.black)
@@ -160,6 +161,7 @@ struct MatrixView: View {
                     .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
+                    .font(.title)
                     
                     
                     Button("Freeview") {
@@ -170,31 +172,35 @@ struct MatrixView: View {
                     .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
+                    .font(.title)
                     
                 }
                 
                 
                 HStack{
-                    Button("  Roku  ") {
+                    Button("   Roku   ") {
                         clicked(mode: "Roku")
                     }.foregroundColor(.black)
                     .padding()
                     .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
+                    .font(.title)
 
                     
-                    Button("   Mac   ") {
+                    Button("    Mac    ") {
                         clicked(mode: "Mac")
                     }.foregroundColor(.black)
                     .padding()
                     .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
+                    .font(.title)
             
                 }
             }
-            
+          
+            Spacer()
         }
         .background(bgColor.edgesIgnoringSafeArea(.all))
     }

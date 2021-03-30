@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+let tabColour = Color.init(red: 138/255, green: 206/255, blue: 216/255)
 struct ContentView: View {
     
     var body: some View {
@@ -26,7 +27,7 @@ struct ContentView: View {
                     Image(systemName: "square.grid.4x3.fill")
                     Text("Matrix")
                 }
-        }.accentColor(.orange)
+        }.accentColor(tabColour)
        
     }
 }
