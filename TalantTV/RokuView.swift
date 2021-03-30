@@ -20,7 +20,7 @@ struct RokuView: View {
             
             
             Button(action: {
-                print("Button action")
+                SendRoku(code: "up")
             }) {
                 Image(systemName: "arrowtriangle.up.fill")
                     .padding()
@@ -33,7 +33,7 @@ struct RokuView: View {
             
             HStack{
                 Button(action: {
-                    print("Button action")
+                    SendRoku(code: "left")
                 }) {
                     Image(systemName: "arrowtriangle.left.fill")
                         .padding()
@@ -45,7 +45,7 @@ struct RokuView: View {
                 }
                 
                 Button(action: {
-                    print("Button action")
+                    SendRoku(code: "select")
                 }) {
                     Image(systemName: "circle.fill")
                         .padding()
@@ -56,7 +56,7 @@ struct RokuView: View {
                 }
                     
                 Button(action: {
-                    print("Button action")
+                    SendRoku(code: "right")
                 }) {
                     Image(systemName: "arrowtriangle.right.fill")
                         .padding()
@@ -69,7 +69,7 @@ struct RokuView: View {
             }
             
             Button(action: {
-                print("Button action")
+                SendRoku(code: "down")
             }) {
                 Image(systemName: "arrowtriangle.down.fill")
                     .padding()
@@ -89,7 +89,7 @@ struct RokuView: View {
             
             HStack{
                 Button(action: {
-                    print("Button action")
+                    SendRoku(code: "back")
                 }) {
                   Text("BACK")
                         .padding()
@@ -100,7 +100,7 @@ struct RokuView: View {
                 }
                 
                     Button(action: {
-                        print("Button action")
+                        SendRoku(code: "home")
                     }) {
                       Text("HOME")
                             .padding()
@@ -114,7 +114,7 @@ struct RokuView: View {
                     
                 
                     Button(action: {
-                        print("Button action")
+                        SendRoku(code: "search")
                     }) {
                       Text("SEARCH")
                             .padding()
@@ -125,7 +125,7 @@ struct RokuView: View {
                 }
                     
                     Button(action: {
-                        print("Button action")
+                        SendRoku(code: "play")
                     }) {
                       Text("PLAY")
                             .padding()
