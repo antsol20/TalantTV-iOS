@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct MatrixView: View {
     
     @State var isKitchen: Bool = true
@@ -104,7 +105,7 @@ struct MatrixView: View {
                         
                     })
             }.padding()
-            .toggleStyle(SwitchToggleStyle(tint: .orange))
+            .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             
             Toggle(isOn: $isLiving) {
@@ -117,7 +118,7 @@ struct MatrixView: View {
                         }
                     })
             }.padding()
-            .toggleStyle(SwitchToggleStyle(tint: .orange))
+            .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Toggle(isOn: $isBedroom) {
                 Text("Bedroom")
@@ -130,7 +131,7 @@ struct MatrixView: View {
                     })
                 
             }.padding()
-            .toggleStyle(SwitchToggleStyle(tint: .orange))
+            .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Toggle(isOn: $isLoft) {
                 Text("Loft")
@@ -143,7 +144,7 @@ struct MatrixView: View {
                     })
                 
             }.padding()
-            .toggleStyle(SwitchToggleStyle(tint: .orange))
+            .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Spacer()
             
@@ -156,7 +157,7 @@ struct MatrixView: View {
                     }
                     .foregroundColor(.black)
                     .padding()
-                    .background(Color.orange)
+                    .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
                     
@@ -166,7 +167,7 @@ struct MatrixView: View {
                     }
                     .foregroundColor(.black)
                     .padding()
-                    .background(Color.orange)
+                    .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
                     
@@ -178,7 +179,7 @@ struct MatrixView: View {
                         clicked(mode: "Roku")
                     }.foregroundColor(.black)
                     .padding()
-                    .background(Color.orange)
+                    .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
 
@@ -187,7 +188,7 @@ struct MatrixView: View {
                         clicked(mode: "Mac")
                     }.foregroundColor(.black)
                     .padding()
-                    .background(Color.orange)
+                    .background(fgColor)
                     .cornerRadius(8)
                     .frame(width: 150, height: 100)
             
@@ -195,7 +196,7 @@ struct MatrixView: View {
             }
             
         }
-        .background(Color.gray.edgesIgnoringSafeArea(.all))
+        .background(bgColor.edgesIgnoringSafeArea(.all))
     }
 }
 

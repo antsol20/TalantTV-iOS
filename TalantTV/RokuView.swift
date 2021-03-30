@@ -7,86 +7,141 @@
 
 import SwiftUI
 
+let fgColor = Color.init(red: 106/255, green: 124/255, blue: 128/255)
+
+let bgColor = Color.init(red: 219/255, green: 213/255, blue: 196/255)
+
 struct RokuView: View {
     var body: some View {
         VStack{
             
-      
-
-//                Button("UP") {
-//                    print("hello")
-//                }
-//                .foregroundColor(.black)
-//                .padding()
-//                .background(Color.orange)
-//                .cornerRadius(8)
-//               // .frame(width: 150, height: 100)
-//                .frame(maxWidth: .infinity)
+            VStack{
+                
+            
             
             Button(action: {
                 print("Button action")
             }) {
-                Text("UP")
+                Image(systemName: "arrowtriangle.up.fill")
                     .padding()
-                    .frame(maxWidth: 300, maxHeight: 40)
-                    
-                    .padding()
+                    .frame(maxWidth: 250, maxHeight: 80)
                     .foregroundColor(.black)
-                    .background(Color.orange)
+                    .background(fgColor)
                     .cornerRadius(8)
-                
             }
-                
-       
             
             
             HStack{
                 Button(action: {
                     print("Button action")
                 }) {
-                    Text("LEFT")
+                    Image(systemName: "arrowtriangle.left.fill")
                         .padding()
-                        .frame(maxHeight: 40)
-                        
-                        .padding()
+                        .frame(maxWidth: 250, maxHeight: 80)
                         .foregroundColor(.black)
-                        .background(Color.orange)
+                        .background(fgColor)
                         .cornerRadius(8)
+                       
+                }
+                
+                Button(action: {
+                    print("Button action")
+                }) {
+                    Image(systemName: "circle.fill")
+                        .padding()
+                        .frame(maxWidth: 250, maxHeight: 80)
+                        .foregroundColor(.black)
+                        .background(fgColor)
+                        .cornerRadius(8)
+                }
                     
+                Button(action: {
+                    print("Button action")
+                }) {
+                    Image(systemName: "arrowtriangle.right.fill")
+                        .padding()
+                        .frame(maxWidth: 250, maxHeight: 80)
+                        .foregroundColor(.black)
+                        .background(fgColor)
+                        .cornerRadius(8)
                 }
-                Button("SELECT") {
-                 print("hello")
-                }
-                .foregroundColor(.black)
-                .padding()
-                .background(Color.orange)
-                .cornerRadius(8)
-                .frame(width: 150, height: 100)
-                
-                
-                Button("RIGJT") {
-                 print("hello")
-                }
-                .foregroundColor(.black)
-                .padding()
-                .background(Color.orange)
-                .cornerRadius(8)
-                .frame(width: 150, height: 100)
                 
             }
             
-            
-            Button("DOWN") {
-             print("hello")
+            Button(action: {
+                print("Button action")
+            }) {
+                Image(systemName: "arrowtriangle.down.fill")
+                    .padding()
+                    .frame(maxWidth: 250, maxHeight: 80)
+                    .foregroundColor(.black)
+                    .background(fgColor)
+                  
+
+                    .cornerRadius(8)
+                    
             }
-            .foregroundColor(.black)
-            .padding()
-            .background(Color.orange)
-            .cornerRadius(8)
-            .frame(width: 150, height: 100)
-         
-     
-        } .background(Color.gray.edgesIgnoringSafeArea(.all))
+            
+            }.padding()
+            
+            Spacer()
+            
+            
+            HStack{
+                Button(action: {
+                    print("Button action")
+                }) {
+                  Text("BACK")
+                        .padding()
+                        .frame(maxWidth: 250, maxHeight: 80)
+                        .foregroundColor(.black)
+                        .background(fgColor)
+                        .cornerRadius(8)
+                }
+                
+                    Button(action: {
+                        print("Button action")
+                    }) {
+                      Text("HOME")
+                            .padding()
+                            .frame(maxWidth: 250, maxHeight: 80)
+                            .foregroundColor(.black)
+                            .background(fgColor)
+                            .cornerRadius(8)
+                }
+                
+                VStack{
+                    
+                
+                    Button(action: {
+                        print("Button action")
+                    }) {
+                      Text("SEARCH")
+                            .padding()
+                            .frame(maxWidth: 250, maxHeight: 40)
+                            .foregroundColor(.black)
+                            .background(fgColor)
+                            .cornerRadius(8)
+                }
+                    
+                    Button(action: {
+                        print("Button action")
+                    }) {
+                      Text("PLAY")
+                            .padding()
+                            .frame(maxWidth: 250, maxHeight: 40)
+                            .foregroundColor(.black)
+                            .background(fgColor)
+                            .cornerRadius(8)
+                }
+                
+                }
+                
+            }.padding()
+            
+            
+            
+        } .background(bgColor.edgesIgnoringSafeArea(.all))
     }
 }
 
