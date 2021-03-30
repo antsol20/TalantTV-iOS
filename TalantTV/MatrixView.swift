@@ -96,7 +96,7 @@ struct MatrixView: View {
             Spacer()
             
             Toggle(isOn: $isKitchen) {
-                Text("Kitchen").font(.title)
+                Text("Kitchen").font(.title).foregroundColor(.black)
                     .onChange(of: isKitchen, perform: { value in
                         if (isKitchen){
                             isLiving = false
@@ -110,7 +110,7 @@ struct MatrixView: View {
             
             
             Toggle(isOn: $isLiving) {
-                Text("Living Room").font(.title)
+                Text("Living Room").font(.title).foregroundColor(.black)
                     .onChange(of: isLiving, perform: { value in
                         if (isLiving){
                             isKitchen = false
@@ -122,7 +122,7 @@ struct MatrixView: View {
             .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Toggle(isOn: $isBedroom) {
-                Text("Bedroom").font(.title)
+                Text("Bedroom").font(.title).foregroundColor(.black)
                     .onChange(of: isBedroom, perform: { value in
                         if (isBedroom){
                             isKitchen = false
@@ -135,7 +135,7 @@ struct MatrixView: View {
             .toggleStyle(SwitchToggleStyle(tint: fgColor))
             
             Toggle(isOn: $isLoft) {
-                Text("Loft").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                Text("Loft").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.black)
                     .onChange(of: isLoft, perform: { value in
                         if (isLoft){
                             isKitchen = false
